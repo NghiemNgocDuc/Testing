@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Ingredient Nearby</title>
+    <title>Find Ingredient Nearby 🥦</title>
     <style>
-        .store-item {
-            margin-bottom: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #FFFFE0;
         }
+
+        /* Center header and search */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header input {
+            padding: 8px;
+            width: 250px;
+            margin-right: 5px;
+        }
+
+        .header button {
+            padding: 8px 12px;
+        }
+
+        /* Results container in grid layout */
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Each store card */
+        .store-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            background-color: #fff;
+            word-wrap: break-word;
+        }
+
+        .store-item h3 {
+            margin-top: 0;
+        }
+
         .copy-btn, .google-maps-btn {
             background-color: #4CAF50;
             color: white;
@@ -15,16 +57,22 @@
             padding: 5px 10px;
             cursor: pointer;
             margin-right: 5px;
+            border-radius: 4px;
         }
+
         .google-maps-btn {
             background-color: #4285F4;
         }
     </style>
 </head>
 <body>
-    <h1>Find Ingredient Nearby</h1>
-    <input type="text" id="ingredient" placeholder="Enter ingredient (e.g., milk)" />
-    <button onclick="findStore()">Search</button>
+    <div class="header">
+        <h1>Find Ingredient Nearby🍴</h1>
+        <input type="text" id="ingredient" placeholder="Enter ingredient (e.g., milk)" />
+        <button onclick="findStore()">Search</button>
+    </div>
+
+    <!-- Results will go here -->
     <ul id="results"></ul>
 
     <script src="/static/script.js"></script>
