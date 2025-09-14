@@ -61,7 +61,7 @@ def find_store():
             "distance": distance,  # Distance in kilometers
             "opening_hours": opening_hours,
             "phone": phone,
-            "map_url": f"https://www.openstreetmap.org/?mlat={store_lat}&mlon={store_lon}"
+
         }
         store_list.append(store_info)
 
