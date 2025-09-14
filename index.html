@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Ingredient Nearby</title>
+    <style>
+        .store-item {
+            margin-bottom: 20px;
+        }
+        .copy-btn, .google-maps-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .google-maps-btn {
+            background-color: #4285F4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find Ingredient Nearby</h1>
+    <input type="text" id="ingredient" placeholder="Enter ingredient (e.g., milk)" />
+    <button onclick="findStore()">Search</button>
+    <ul id="results"></ul>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
