@@ -34,7 +34,7 @@ def find_store():
     [out:json];
     node
       ["shop"="supermarket"]
-      (around:5000, {lat}, {lng});  // 5000 meters radius
+      (around:50000, {lat}, {lng});  // 5000 meters radius
     out body;
     """
 
