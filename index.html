@@ -5,65 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Ingredient Nearby 🥦</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #FFFFE0;
-        }
+    :root {
+        --bg-color: rgb(35, 47, 67);       /* Deep navy background */
+        --card-bg: #1E2A3A;                /* Slightly lighter card background */
+        --text-color: #F0F4F8;             /* Soft white text */
+        --accent-color: #FF6B6B;           /* Coral accent for buttons and headers */
+        --accent-hover: #FF8787;           /* Lighter coral on hover */
+        --google-blue: #4285F4;            /* Google Maps button */
+        --border-color: #4A5A6A;           /* Subtle border tone */
+        --link-yellow: #FFD700;            /* Bright yellow for links */
+        --link-hover: #FFEA70;             /* Softer yellow on hover */
+    }
 
-        /* Center header and search */
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
 
-        .header input {
-            padding: 8px;
-            width: 250px;
-            margin-right: 5px;
-        }
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-        .header button {
-            padding: 8px 12px;
-        }
+    .header input {
+        padding: 8px;
+        width: 250px;
+        margin-right: 5px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        background-color: var(--card-bg);
+        color: var(--text-color);
+    }
 
-        /* Results container in grid layout */
-        #results {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            list-style: none;
-            padding: 0;
-        }
+    .header button {
+        padding: 8px 12px;
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
-        /* Each store card */
-        .store-item {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            background-color: #fff;
-            word-wrap: break-word;
-        }
+    .header button:hover {
+        background-color: var(--accent-hover);
+    }
 
-        .store-item h3 {
-            margin-top: 0;
-        }
+    #results {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
 
-        .copy-btn, .google-maps-btn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            margin-right: 5px;
-            border-radius: 4px;
-        }
+    .store-item {
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        background-color: var(--card-bg);
+        word-wrap: break-word;
+    }
 
-        .google-maps-btn {
-            background-color: #4285F4;
-        }
+    .store-item h3 {
+        margin-top: 0;
+        color: var(--accent-color);
+    }
+
+    .store-item p {
+        margin: 5px 0;
+    }
+
+    .copy-btn, .google-maps-btn {
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-right: 5px;
+        border-radius: 4px;
+    }
+
+    .copy-btn {
+        background-color: var(--accent-color);
+    }
+
+    .copy-btn:hover {
+        background-color: var(--accent-hover);
+    }
+
+    .google-maps-btn {
+        background-color: var(--google-blue);
+    }
+
+    .google-maps-btn:hover {
+        background-color: #5a95f5;
+    }
+
+
+
     </style>
+
+
+
 </head>
 <body>
     <div class="header">
