@@ -36,7 +36,7 @@ async function findStore() {
                 Distance: ${store.distance.toFixed(2)} km<br>
                 <strong>Opening Hours:</strong> ${store.opening_hours}<br>
                 <strong>Phone:</strong> ${store.phone}<br>
-                <a href="${store.map_url}" target="_blank">View on Map</a>
+
             `;
 
             // Create the copy button
